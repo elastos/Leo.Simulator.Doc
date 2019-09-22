@@ -73,11 +73,21 @@ Here the story comes:
 Alice has a sensitive private picture. She want someone to help her to turn the picture from color to black and white. She doesn't have the software or doesn't know how to use the image processing software. Well there are some online services provide can do that, however Alice has to upload the image to some kind of cloud which Alice doesn't trust. She is afraid of the sensitive private picture disclosed since she has no control as long as the picture were uploaded anywhere on the internet. 
 
 Bob is a software developer. He developed a algorithm to turn a color image into black & white. Typically he can upload his code to a web server and provide kind of service to make some money. He did not go this way because he realize many clients do not trust him or the web server and not willing to upload their private pictures. Some clients ask Bob if he can send them the code so that they can run the algorithm in their own computer. Bob has big concern on this because he is afraid of disclose the code so that no one else would like to pay him any more. Bob is looking for a pure decentralized trusted computing platform so that he or anyone else , even the owner of the node running the process, cannot steal the private images. This is how Leo can do for Bob and Alice. 
+
+Click [HERE](./demo201909/1.0.Preparation.md) to see the how to prepare and run the demo yourself.
+
+![Run the demo](demo-doc/demo201909/images/fullScreenTerminals.png)
+
 ## Step 1 Bob: Offer decentralized image processing service on Leo
 First, Bob need to encrypt his code and upload to the Leo platform as a Lambda Transaction. In this transaction, Bob provide the price model "Pay per use" at the price of $Leo 3. Because Bob uploaded the his code in encrypted format, no one can decrypt unless Bob give him the secure key. In this case, Bob is safe. 
 Bob also provide a hash of the docker image which can run his code. Bob's code is written in Python, so he just need to find a standard Python docker image which can be find in dockerhub anywhere. 
 
+![lambda Posted Bob](demo-doc/demo201909/images/uploadLambda.png)
+
+
 Next, Bob just need to do some advertisement so that the potential customer will know the hash of his paid service. 
+
+Click [HERE](./demo201909/1.UploadImageProcessService.md) to see the demo in detail.
 
 ## Step 2 Alice: Offer an image processing task to Leo
 Alice found Bob's offer. Alice doesn't trust Bob, but Alice trust the Leo platform. Alice use her client to encrypt her private picture then upload to Leo as a new transaction. In this transaction she claim to use Bob's service (mentioned his service hash), and the requirement of pravacy: such as 1) The executor or monitor has to have a credit score 100 or above. 2)For executor's node, no network connection during process, clean up all cache, tmp file and trace after processing. make sure leave no trace. And the last not least, her offer: she is willing to pay $10 for this task.
