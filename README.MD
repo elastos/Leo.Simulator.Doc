@@ -102,3 +102,5 @@ Once done, the executor will clean up the docker image, all tmp files or memory 
 Layey one blockchain receive all the confirmations from monitor and request from executor. Smart contract is triggered to calculate the reward and penalty. The current distribution is this: Alice paid $Leo 10. $1 burn as gas fee. Bob get $3 (as he offerred his algorithm at $5 per use). The rest $6 will be distributed to exeuction group. The exeuction get 50%, which is $3. Other 9 monitors share another 50%, which is $0.33 per monitor.
 
 The new balance will be included in next block. 
+
+# 
