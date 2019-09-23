@@ -5,3 +5,4 @@ Index:
 2. [Alice's image processing task](2.AliceImageTask.md)
 3. [Nodes run VRF to compete to join execution group and consensus on executor](3.competeForExecutorAndConsensus.md)
 4. [Executor run Bob's code on Alice's data](4.execution.md)
+5. [Settlemention](5.settlement.md)
