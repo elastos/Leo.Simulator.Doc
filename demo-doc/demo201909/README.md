@@ -6,3 +6,5 @@ Index:
 3. [Nodes run VRF to compete to join execution group and consensus on executor](3.competeForExecutorAndConsensus.md)
 4. [Executor run Bob's code on Alice's data](4.execution.md)
 5. [Settlemention](5.settlement.md)
+6. [Security and privacy design in our demo](6.conclusion.md)
+
