@@ -13,7 +13,7 @@ The reasons we need such a trusted computing network lay on the following facts:
 * If the computing tasks include sensitive privacy data and/or copyrighted information,the only thing you can do is to trust the computing machine is secure and owner is honest. Unfortunately that is not always the case.
 * If we have a technical solution that guarantees the execution environment is exactly what the execution node advertise and whole computing process is under seamless remote attestation by unpreditable inspectors (or monitors), we do not have to trust nodes and nodes' owners. We just trust the consensus among all nodes. This is the essence of the blockchain consensus: "I do not have to trust anyone, but the consensus". This consensus is the core of Leo. This is why we havd the Leo project started in 2019.
 
-# Run a demo
+# [Run the demo](./demo-doc/demo201909)
 Currently we have developed a simulator to explain the concept. This is just a simulator, not a real product. The goal of the demo is to use some real life examples to show how the consensus was made and why it is "technically" trustable while the nodes who run your data are trustless.
 
 
