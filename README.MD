@@ -3,7 +3,7 @@
 
 # What, Why and How? about Leo
 
-Leo project is a layer 2 solution on top of Elastos ,which is the existing layer 1 blockchain. It provides a trusted subset of existing Elastos Carrier P2P network. Only hardware (TPM) attested node can join the network and provide trusted computing service to clients. Leo, the token, is used in this community like "gas" to Ethereum. Leo node owners provide trusted computation services in reward of ELA and a credit score called "credit". The "credit" acts like the "stake" in PoS based consensus. However, credit is not currency. It cannot be traded or purchased. The only way to gain credit is to work honestly for long period of time.
+Leo project is a layer 2 solution on top of Elastos ,which is the existing layer 1 blockchain. It provides a trusted subset of existing Elastos Carrier P2P network. Only hardware (TPM) attested node can join the network and provide trusted computing service to clients. ELA, the token, is used in this community like "gas" to Ethereum. Leo node owners provide trusted computation services in reward of ELA and a credit score called "credit". The "credit" acts like the "stake" in PoS based consensus. However, credit is not currency. It cannot be traded or purchased. The only way to gain credit is to work honestly for long period of time.
 
 Please read the presentation slides by following this [link](./presentations/Blockchain_and_TrustedComputing_Apr2019.md): The presentation was made at The World Bank Group in Apr 2019.
 
