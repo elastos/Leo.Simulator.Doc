@@ -3,7 +3,7 @@
 
 # What, Why and How? about Leo
 
-Leo project is a layer 2 solution on top of Elastos,which is the existing layer 1 blockchain. It provides a trusted subset of existing Elastos Carrier P2P network. Only hardware (TPM) attested node can join the network and provide trusted computing service to clients. Leo, the token, is used in this community like "gas" to Ethereum. Leo node owners provide trusted computation services in reward of Leo and a credit score called "credit". The "credit" acts like the "stake" in PoS based consensus. However, credit is not currency. It cannot be traded or purchased. The only way to gain credit is to work honestly for long period of time.
+Leo project is a layer 2 solution on top of Elastos,which is the existing layer 1 blockchain (Which is Elastos sidechain). It provides a trusted subset of existing Elastos Carrier P2P network. Only hardware (TPM) attested node can join the network and provide trusted computing service to clients. Leo, the token, is used in this community like "gas" to Ethereum. Leo node owners provide trusted computation services in reward of ELA and a credit score called "credit". The "credit" acts like the "stake" in PoS based consensus. However, credit is not currency. It cannot be traded or purchased. The only way to gain credit is to work honestly for long period of time.
 
 Please read the presentation slides by following this [link](./presentations/Blockchain_and_TrustedComputing_Apr2019.md): The presentation was made at The World Bank Group in Apr 2019.
 
@@ -79,7 +79,7 @@ Click [HERE](./demo201909/1.0.Preparation.md) to see the how to prepare and run 
 ![Run the demo](demo-doc/demo201909/images/fullScreenTerminals.png)
 
 ## Step 1 Bob: Offer decentralized image processing service on Leo
-First, Bob needs to encrypt his code and upload to the Leo platform as a Lambda Transaction. In this transaction, Bob provides the price model "Pay per use" at the price of $Leo 3. Because Bob uploads his code in encrypted format, no one can decrypt unless Bob gives him the secure key. In this case, Bob is safe. 
+First, Bob needs to encrypt his code and upload to the Leo platform as a Lambda Transaction. In this transaction, Bob provides the price model "Pay per use" at the price of $ELA 3. Because Bob uploads his code in encrypted format, no one can decrypt unless Bob gives him the secure key. In this case, Bob is safe. 
 Bob also provides a hash of the docker image which can run his code. Bob's code is written in Python. He just needs to find a standard Python docker image which can be find in dockerhub anywhere. 
 
 ![lambda Posted Bob](demo-doc/demo201909/images/uploadLambda.png)
@@ -90,7 +90,7 @@ Next, Bob needs to do some advertisement so that potential customers will know t
 Click [HERE](./demo201909/1.UploadImageProcessService.md) to see the demo in detail.
 
 ## Step 2 Alice: Offer an image processing task to Leo
-Alice found Bob's offer. Alice doesn't trust Bob, but Alice trusts the Leo platform. Alice uses her client to encrypt her private picture then upload it to Leo as a new transaction. In this transaction she claims to use Bob's service (mentioned his service hash), and the requirement of pravacy: such as 1) The executor or monitor has to have a credit score 100 or above. 2)For executor's node, no network connection during process, clean up all cache, tmp file and trace after processing, make sure leave no trace. And the last not least, her offer: she is willing to pay $10 for this task.
+Alice found Bob's offer. Alice doesn't trust Bob, but Alice trusts the Leo platform. Alice uses her client to encrypt her private picture then upload it to Leo as a new transaction. In this transaction she claims to use Bob's service (mentioned his service hash), and the requirement of pravacy: such as 1) The executor or monitor has to have a credit score 100 or above. 2)For executor's node, no network connection during process, clean up all cache, tmp file and trace after processing, make sure leave no trace. And the last not least, her offer: she is willing to pay $ELA 10 for this task.
 
 ## Step 3 VRF Select execution group members
 Once Alice's transaction is broacasted to the Leo network, any node who meets the criteria can run a VRF function to determin if he is lucky enough to bid this task. Based on the default configuation ( or Alice can have a special config), there are 10 nodes passed the VRF and become "members of execution group". Because of the randomness of VRF, the number sometimes could be a little higher or lower than 10, but it doens't matter. 
@@ -109,7 +109,7 @@ After the execution, the result (the black & white image) is sent to Alice with 
 Once the task is done, the executor will clean up the docker image, all tmp files and memory trace. Monitors will confirm this by doing remote attestation using TPM. All of the monitors will sign the confirmation and send to layer one blockchain. Executor sends the payment request to layer one blockchain too.
 
 ## Step 7 Settlement
-Layer one blockchain receive all the confirmations from monitors and payment request from the executor. Smart contract is triggered to calculate the reward and/or penalty. The current distribution is this: Alice paid Leo $10. $1 burn as gas fee. Bob gets $3 (as he offerred his algorithm at $5 per use). The rest $6 will be distributed to the exeuction group. The exeuctor gets 50%, which is $3. Other 9 monitors share another 50%, which is $0.33 per monitor.
+Layer one blockchain receive all the confirmations from monitors and payment request from the executor. Smart contract is triggered to calculate the reward and/or penalty. The current distribution is this: Alice paid ELA $10. $ELA 1 burn as gas fee. Bob gets $ELA 3 (as he offerred his algorithm at $ELA 5 per use). The rest $ELA 6 will be distributed to the exeuction group. The exeuctor gets 50%, which is $ELA 3. Other 9 monitors share another 50%, which is $ELA 0.33 per monitor.
 
 The new balance will be included in the next block. 
 
