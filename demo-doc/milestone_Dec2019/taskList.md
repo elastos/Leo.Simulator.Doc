@@ -37,6 +37,7 @@ Once the dedicated IPFS server separated from original node.js client, we should
 Docker In Docker means  we run a general isolate docker container to work as a network / storage isolator between the real execution environment (inside dodker) and outside world. Once we have such an middle layer, we can easily clean up all tmp storage and guarantee network isolation. 
 
 # Raspberry Pi
+![tech stack](./images/RPi_Modules_Stack.jpg)
 ## Minimized OS for Raspberry Pi 
 We do not need too many features in RPi. We only need to run docker without any additional components. Even keyboard, display card drivers can be ignored in order to minimize the attack surface. So we can choose or even build ourselves a minimized version of RPi linux. We can start from exsting minmized RPi OS, try to reduce the size and components untill all remaining components are necessary to us.
 
