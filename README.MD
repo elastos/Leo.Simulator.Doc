@@ -20,7 +20,7 @@ Currently we have developed a simulator to explain the concept. This is just a s
 ## Do not want get hands dirty? watch the video
 
 TO-DO:
-
+Or, click [here for the detail step by step with screen captures](./demo-doc/demo201909): 
 ## Ready to get hands dirty? Let's run the code on your own
 
 
