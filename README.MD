@@ -3,15 +3,16 @@
 
 # What, Why and How? about Leo
 
-Leo project is a layer 2 solution on top of Elastos ,which is the existing layer 1 blockchain. It provides a trusted subset of existing Elastos Carrier P2P network. Only hardware (TPM) attested node can join the network and provide trusted computing service to clients. ELA, the token, is used in this community like "gas" to Ethereum. Leo node owners provide trusted computation services in reward of ELA and a credit score called "credit". The "credit" acts like the "stake" in PoS based consensus. However, credit is not currency. It cannot be traded or purchased. The only way to gain credit is to work honestly for long period of time.
+Leo project is not a blockchain itself. it is a layer 2 solution on top of Elastos ,which is the existing layer 1 blockchain. It provides a trusted subset of existing Elastos Carrier P2P network. Only hardware (TPM) attested node can join the network and provide trusted computing service to clients. ELA, the token, is used in this community like "gas" to Ethereum. Leo node owners provide trusted computation services in reward of ELA and a credit score called "credit". The "credit" acts like the "stake" in PoS based consensus. However, credit is not currency. It cannot be traded or purchased. The only way to gain credit is to work honestly for long period of time.
 
 Please read the presentation slides by following this [link](./presentations/Blockchain_and_TrustedComputing_Apr2019.md): The presentation was made at The World Bank Group in Apr 2019.
 
 The reasons we need such a trusted computing network lay on the following facts:
 * Blockchain can offer us trustless decentralized platforms. However, blockchain cannot handle real computation. Anything that needs some kind of "real' computation cannot be ran on blockchain. We have to consider run off-the-chain.
+
 * As long as the computation happpens off the chain, the consensus of blockchain will no longer protect the computation. The computing environment is no longer trustable. 
 * If the computing tasks include sensitive privacy data and/or copyrighted information,the only thing you can do is to trust the computing machine is secure and owner is honest. Unfortunately that is not always the case.
-* If we have a technical solution that guarantees the execution environment is exactly what the execution node advertise and whole computing process is under seamless remote attestation by unpreditable inspectors (or monitors), we do not have to trust nodes and nodes' owners. We just trust the consensus among all nodes. This is the essence of the blockchain consensus: "I do not have to trust anyone, but the consensus". This consensus is the core of Leo. This is why we havd the Leo project started in 2019.
+* If we have a technical solution that guarantees the execution environment is exactly what the execution node advertise and whole computing process is under seamless remote attestation by unpreditable inspectors (or monitors), we do not have to trust nodes and nodes' owners. We just trust the consensus among all nodes. This is the essence of the blockchain consensus: "I do not have to trust anyone, but the consensus". This consensus is the core of Leo. This is why we have the Leo project started in 2019.
 
 # [Run the demo](./demo-doc/demo201909)
 Currently we have developed a simulator to explain the concept. This is just a simulator, not a real product. The goal of the demo is to use some real life examples to show how the consensus was made and why it is "technically" trustable while the nodes who run your data are trustless.
