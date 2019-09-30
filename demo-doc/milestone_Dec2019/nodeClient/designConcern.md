@@ -98,3 +98,11 @@ Sync to blockchain to get latest block.
 
 ## Sandbox, the trust container to run guest task inside
 
+For those guest task require total isolated network environment, we can use this sandbox as the middle layer. In this layer, we will create the guest container inside this container. The guest container is defined without network. But there is a shared volumn with this sand box. The shared volumn is the only I/O to the guest container. In this case, as long as we can guarantee the middle layer sandbox is totally detroyed without any trace left, we are sure the guest container has no trace left. 
+
+Let's use the Sep2019 demo as an example. When Bob design the lambda, he design the container without network but only have a shared volumn with the host, actually not the host, but the middle layer sandbox. Because there is no network, Alice won't worry about Bob send her picture to somewhere else. 
+
+The original picture will be downloaded and decrypted in the shared volumn. Bob's Python code processed the picture and save the output image on the shared volumn too. 
+
+The sandbox encrypted the output image send back to Alice then destroy the whole sandbox , inluding the guest container inside. TPM controlled Trust Engine to validate the sandbox is clear, no trace left, then the remote attestators can sign the proof to Layer One.
+
