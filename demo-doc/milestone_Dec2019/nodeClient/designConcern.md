@@ -43,5 +43,58 @@ Once this model works, we can actually migrate to any platform.
 
 ### Connect to TPM directly
 
+## gRPC and FFI
+
 ### General crypto API modeule. such as VRF to off load the work from those container.
+
+Rather than using REST API which is slower, another way to call Rust module from Node.JS is using FFI
+https://github.com/node-ffi/node-ffi
+
+Example: https://medium.com/@atulanand94/using-rust-modules-for-javascript-web-development-part-3-3-nodejs-7c71e4ae23fe
+
+We can use volumn to share the host folder to docker container. 
+
+This solution also work when the dynamic library was written in C/C++. 
+
+https://github.com/nodejs/node-gyp is also an alternative solution, but I have had some build error before. so I am hesitate to use.
+
+
+### gRPC in general communication protocol between each modules
+Besides the FFI mentioned in above section, gRPC can be used in most none-efficient-critical cases.
+An example of gRPC between Rust and Node in my github repo : https://github.com/kevingzhang/tower-grpc
+
+Compare with FFI, there are a few significant benefits
+- Isolation in different process. FFI runs code in the caller's process. It is crash, the caller will crash. So we only use FFI in the extrame cases that the efficiency is so critical that we have to take the risk. And only if the called module is very mature with less chance to update. A few examples are VRF, Encryption/Decryption/ Hash etc. 
+
+- Language independency. Since gRPC supports major programming languages, we can use different modules from different developers using their preferred programming languages. 
+
+- Faster and secure by leveraging HTTP/2 and Protocol Buff
+
+# Modules running in docker container
+
+## IPFS
+
+## Image2IPFS or IPDR
+
+Dockerhut.com is a general docker image registry by default. But it is centralized and potential security concern. We can run a Image2IPFS or IPDR services to redirect all docker images from centralized registry to IPFS. These projects are
+
+https://github.com/jvassev/image2ipfs/
+
+https://github.com/miguelmota/ipdr
+
+The benefits are
+
+- Additional check on the images downloaded from IPFS. 
+- Potential Pay-Per_use model depends on blockchain token-economy. Only paid user can get the key to unlock images
+- Leo commitee can release "trusted" images so-called "white list". 
+- Images can have its own "credit score" stored and maintained in blockchain
+- Total decentralized
+
+## Leo Node
+
+## ELA Eth sidechain light node or full node if necessary
+
+Sync to blockchain to get latest block. 
+
+## Sandbox, the trust container to run guest task inside
 
