@@ -3,6 +3,8 @@ When we take a look at the diagram of node client here
 ![tech stack](../images/RPi_Modules_Stack.jpg)
 
 You will see some of the modules are put into docker containers. Some are out of the docker and run on top of OS directly. The idea and principles are like this
+
+
 | Features | Lower in tech stack | Higher in tech stack |
 |---|---|---|
 | Attack surface | Very little | relative large |
