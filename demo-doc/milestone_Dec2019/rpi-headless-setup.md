@@ -81,7 +81,17 @@ sudo groupadd docker
 sudo gpasswd -a $USER docker
 docker run hello-world  #run a test to make sure you do not need sudo
 ```
+Or or this command to add pi into docker group
+```bash
+sudo setfacl -m user:brandon:rw /var/run/docker.sock
+```
 
+Restart before continue.
+Then try 
+```bash
+docker ps
+```
+to make sure you have access to docker socket.
 
 ## test installing using
 
