@@ -36,6 +36,17 @@ network={
 ```
 
 This will allow the RPi start with the above ssid and passkey.
+
+## SSH into Raspberry Pi
+
+After insert SD card and start Pi.
+
+```bash
+
+ssh pi@raspberrypi.local
+
+```
+
 # Install general dev tools
 
 ## Install Rust
@@ -63,6 +74,13 @@ From
 https://medium.freecodecamp.org/the-easy-way-to-set-up-docker-on-a-raspberry-pi-7d24ced073ef
 
 `curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh`
+
+Set user name to docker group
+```bash
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+docker run hello-world  #run a test to make sure you do not need sudo
+```
 
 
 ## test installing using
