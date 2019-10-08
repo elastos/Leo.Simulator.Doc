@@ -113,6 +113,34 @@ then just reboot the shell
 source ~/.bashrc
 ```
 
+
+# Install IPFS docker image
+
+```bash
+docker pull yrzr/go-ipfs-arm32v7
+```
+this will pull the ipfs arm32v7 image from docker hub
+
+create /staging and data folder for ipfs
+```bash
+cd ~
+mkdir ipfs
+cd ipfs
+mkdir staging
+mkdir data
+IPFS_STAGING=/home/pi/ipfs/staging
+IPFS_DATA=/home/pi/ipfs/data
+```
+Now run the ipfs docker container
+```bash
+docker run -d --name ipfs_host -v $IPFS_STAGING:/export -v $IPFS_DATA:/data/ipfs -p 4001:4001 -p 127.0.0.1:8080:8080 -p 127.0.0.1:5001:5001 yrzr/go-ipfs-arm32v7:latest
+```
+
+Reference: https://hub.docker.com/r/yrzr/go-ipfs-arm32v7
+
+
+
+
 # Install Zymbit SDK API 
 
 ## install Zymbit SDK
@@ -154,3 +182,5 @@ TPM command execution is single-threaded: it executes one command at a time. Com
 # Raspberry Pi as PXE server
 
 https://elinux.org/R-Pi_PXE_Server
+
+
