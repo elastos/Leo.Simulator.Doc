@@ -64,7 +64,11 @@ Reference https://github.com/protocolbuffers/protobuf/issues/4097
 ```bash
 sudo apt install git
 ```
-
+## Install performance monitoring (for dev use)
+```bash
+sudo apt-get install nmon
+nmon
+```
 
 # Install docker to raspberry pie
 
