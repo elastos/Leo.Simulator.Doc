@@ -3,7 +3,8 @@ Usaeful links
 
 [headless setup rpi 4](https://desertbot.io/blog/headless-raspberry-pi-4-ssh-wifi-setup)
 ## Download rasbian image and burn into micro SD card
-
+If the SD card has wrong format, you may fail using Etcher to transfer image to SD card.
+You can use DD to transfer image to SD card. The detail instruction is here: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
 ## Enable ssh before insert sd card into raspberry pi
 
 When the sd card still in Macbook slot run
