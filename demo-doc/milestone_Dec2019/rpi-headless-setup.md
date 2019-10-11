@@ -155,7 +155,10 @@ docker run -d --name ipfs_host -v $IPFS_STAGING:/export -v $IPFS_DATA:/data/ipfs
 
 Reference: https://hub.docker.com/r/yrzr/go-ipfs-arm32v7
 
-
+Install docker-compose
+```bash
+https://github.com/elastos/Leo.Rpi.TrustEngine.git
+```
 
 
 # Install Zymbit SDK API 
