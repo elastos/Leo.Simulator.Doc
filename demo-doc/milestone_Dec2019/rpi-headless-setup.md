@@ -129,6 +129,9 @@ then just reboot the shell
 ```
 source ~/.bashrc
 ```
+If you will push any docker image to github, you will need to run ```sudo apt install gnupg2 pass
+
+``` first, otherwise docker login will fail
 
 
 # Install IPFS docker image
