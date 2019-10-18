@@ -65,6 +65,8 @@ The TPM communication channel needs to
 #### Integrate the algorithm into node (Task 5.3.2.2)
 
 ## VRF microservice (Task 5.4)
+### Support VRF in RUST microservice and unix domain socket communication (Server)  (Task 5.4.1)
+### Replace existing sync js function package to unix domain socket RPC calls (Client) (Task 5.4.2)
 
 
 ## TPM protection to RPi and TPM itself (Task 5.5)
@@ -77,6 +79,12 @@ Including
 We need to some security test for these features
 
 ## Docker in docker (Task 6.1)
+
+# Rasbperry Pi System Setup (Task 7.0)
+## Setup Init docker compose (Task 7.1)
+## Setup Docker launcher security check (Task 7.1)
+## Setup Docker launcher API exposed to other clients (Task 7.2)
+
 
 # Pentest for RPi 
 
