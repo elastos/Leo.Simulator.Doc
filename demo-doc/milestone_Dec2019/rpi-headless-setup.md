@@ -6,6 +6,11 @@ Usaeful links
 If the SD card has wrong format, you may fail using Etcher to transfer image to SD card.
 You can use DD to transfer image to SD card. The detail instruction is here: 
 - Linux: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
+
+If you are trying to transfer ISO to SD card using Etcher and you are using latest MacOS Catalina. You may have to run it using Sudo otherwise it will not work. 
+```  
+sudo /Applications/balenaEtcher.app/Contents/MacOS/balenaEtcher  
+```
 ## Enable ssh before insert sd card into raspberry pi
 - OSX: https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
 
